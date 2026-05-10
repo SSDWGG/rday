@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		099B33CBEBDBCF652FA8125F /* CountdownDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A3910A7616E4AE61CE0752 /* CountdownDetailView.swift */; };
+		09BE7B1E82EB0A6195CA36F4 /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBBA4D119718C519314C869 /* CategoryPickerView.swift */; };
+		0A179A9E3CAB108EB85B3F06 /* TodoFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A33A0AE8AB3F6ADF27F44D2 /* TodoFormView.swift */; };
+		0B24E90CC109BF4ABE05D013 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4850E9D26D2564847D6191FB /* Color+Hex.swift */; };
+		0C44FEBE403D6B33DD441504 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDBFBF71E2CC3C82E674BA1 /* TodoDetailView.swift */; };
+		114A8BDCB9F7AE5FFC6D9660 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305ED9019C57245C580D3B5E /* DateHelper.swift */; };
+		168811282789F455AE20A68C /* CountdownEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FF8E46AEA4E12D15AB48BE /* CountdownEvent.swift */; };
+		2972079ADC55E562F8974BBC /* CountdownFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED165BB287B0A6BC0E41822B /* CountdownFormViewModel.swift */; };
+		2DE1BE1ACF1C51A88C412C25 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425BDD8E2B7A34A41DC9F115 /* TodoListViewModel.swift */; };
+		30EE6E8729C0E03D51283D85 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434877EFB0D51FCCE06053E /* TodoListView.swift */; };
+		32A2CA0BEF149893EE7D91E7 /* CountdownFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E967C38CA04FA5D3492C734D /* CountdownFormView.swift */; };
+		3D3D1688CE387E285FAA4BC1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DBE8D5700F571B945B271A /* Constants.swift */; };
+		445CB1E0D37F8F8E18869BA3 /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6458FF93B47B521112086D /* EventCardView.swift */; };
+		4F11B3F0198782477515F377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36C0C8480D40022AFD9A241 /* Assets.xcassets */; };
+		507FCF24A38279752378ED83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761E9EFBB8408A134C855DAF /* ContentView.swift */; };
+		6676F581A971DE3F71BC9D04 /* EventCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58770D557DC1A408BF1E240 /* EventCategory.swift */; };
+		6B8511BAA8FA4A0146DD418F /* TodoFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088F6AB8E460D565479057B /* TodoFormViewModel.swift */; };
+		71A9E0A1E91BE78F898F473C /* CountdownListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94738F286B84D0576BEF7D7D /* CountdownListViewModel.swift */; };
+		7C49FCA68969828C61000093 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E92D7FEC6C2BCDF7228D56 /* TodoItem.swift */; };
+		830A41634418A3E25DABD1BB /* TodoReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0024DF00C2F1516FF2A0A11D /* TodoReminder.swift */; };
+		931C3CEB5EF519BAE220ACB4 /* CategoryChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA33FCA1DF45425B7D9ACDF /* CategoryChipView.swift */; };
+		949D0E6470471DB7984D691A /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664D9B3A2BD1B36FA850154 /* DesignSystem.swift */; };
+		97A1446C368BA6D25221AC5D /* DateCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE4196666B8D12104FF02D3 /* DateCalculatorView.swift */; };
+		9BE9CAB307C44440E683ED6C /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A92354A340961B6376B48 /* ShareCardView.swift */; };
+		A079A508B9ED826225CAEFFD /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68862BAD409544D1C0E158 /* TodoRowView.swift */; };
+		CC76CFFD94C32669DFFBD3C9 /* CountdownListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457AA9038CFEDF466A7B073E /* CountdownListView.swift */; };
+		DBBDFD883237D345255D30CD /* PriorityBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8D88422C5D51EDAEF9488 /* PriorityBadgeView.swift */; };
+		DD6651E6D7CFEDAF4B00F5C4 /* ColorPresetPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6712147D5CE08E4B17F839 /* ColorPresetPickerView.swift */; };
+		E14FD2CFFA7324FB36723A1A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8681BF9BFD9DBED1568946D /* NotificationService.swift */; };
+		E58DF8654B20C0E2D02F36F9 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3513E26EA6669C9D44DDE5C7 /* PreviewData.swift */; };
+		F2E97D8089253206A9B03F0E /* EmailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAB8FACBF089AA1DCD3E57A /* EmailService.swift */; };
+		F8BC81BAD26F2E31FEFA1118 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531DBFB17254864769F3ACF3 /* EmptyStateView.swift */; };
+		FA31B24E4092C88DC40F0DA5 /* AppStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E9095DA9CC66579C5020C /* AppStateManager.swift */; };
+		FCE6221FB91E3205535A1296 /* RdayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0340EE9D8E1F15F658BAF7E8 /* RdayApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0024DF00C2F1516FF2A0A11D /* TodoReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoReminder.swift; sourceTree = "<group>"; };
+		0340EE9D8E1F15F658BAF7E8 /* RdayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RdayApp.swift; sourceTree = "<group>"; };
+		1434877EFB0D51FCCE06053E /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		1A6458FF93B47B521112086D /* EventCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardView.swift; sourceTree = "<group>"; };
+		2664D9B3A2BD1B36FA850154 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		305ED9019C57245C580D3B5E /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		33FF8E46AEA4E12D15AB48BE /* CountdownEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownEvent.swift; sourceTree = "<group>"; };
+		3513E26EA6669C9D44DDE5C7 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		3D4A92354A340961B6376B48 /* ShareCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
+		3F6712147D5CE08E4B17F839 /* ColorPresetPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPresetPickerView.swift; sourceTree = "<group>"; };
+		425BDD8E2B7A34A41DC9F115 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
+		457AA9038CFEDF466A7B073E /* CountdownListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownListView.swift; sourceTree = "<group>"; };
+		4850E9D26D2564847D6191FB /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		531DBFB17254864769F3ACF3 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		664E9095DA9CC66579C5020C /* AppStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateManager.swift; sourceTree = "<group>"; };
+		6A33A0AE8AB3F6ADF27F44D2 /* TodoFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFormView.swift; sourceTree = "<group>"; };
+		6DE4196666B8D12104FF02D3 /* DateCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculatorView.swift; sourceTree = "<group>"; };
+		761E9EFBB8408A134C855DAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		81A3910A7616E4AE61CE0752 /* CountdownDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownDetailView.swift; sourceTree = "<group>"; };
+		86E92D7FEC6C2BCDF7228D56 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		94738F286B84D0576BEF7D7D /* CountdownListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownListViewModel.swift; sourceTree = "<group>"; };
+		9EA8D88422C5D51EDAEF9488 /* PriorityBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityBadgeView.swift; sourceTree = "<group>"; };
+		AEBBA4D119718C519314C869 /* CategoryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
+		B58770D557DC1A408BF1E240 /* EventCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategory.swift; sourceTree = "<group>"; };
+		C8681BF9BFD9DBED1568946D /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		C9DBE8D5700F571B945B271A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB113782927A3D8E69EE7105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CC68862BAD409544D1C0E158 /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
+		DA41EA0E2599C6CF96552784 /* Rday.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Rday.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAAB8FACBF089AA1DCD3E57A /* EmailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailService.swift; sourceTree = "<group>"; };
+		DDA33FCA1DF45425B7D9ACDF /* CategoryChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryChipView.swift; sourceTree = "<group>"; };
+		E967C38CA04FA5D3492C734D /* CountdownFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownFormView.swift; sourceTree = "<group>"; };
+		ED165BB287B0A6BC0E41822B /* CountdownFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownFormViewModel.swift; sourceTree = "<group>"; };
+		F088F6AB8E460D565479057B /* TodoFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFormViewModel.swift; sourceTree = "<group>"; };
+		F36C0C8480D40022AFD9A241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FEDBFBF71E2CC3C82E674BA1 /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		01E5C7E2554CD19E07FCBBCE = {
+			isa = PBXGroup;
+			children = (
+				F0CE15721028E9F4D3D8B7B3 /* Rday */,
+				4DB44E4AC9272DBF91AB0190 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		033BBB1C8BCDCD8F8DFA4894 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2FBA4A5A8F3ECE10ED232 /* Common */,
+				A3996849185C4C7A73DCDBCF /* Countdown */,
+				C8F2065825E50FAD5B28D9B7 /* Todo */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3BC0A91E5EC6BF96E93A3CD0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ED165BB287B0A6BC0E41822B /* CountdownFormViewModel.swift */,
+				94738F286B84D0576BEF7D7D /* CountdownListViewModel.swift */,
+				F088F6AB8E460D565479057B /* TodoFormViewModel.swift */,
+				425BDD8E2B7A34A41DC9F115 /* TodoListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		46A30E8E50CA293A1D34960A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C9DBE8D5700F571B945B271A /* Constants.swift */,
+				305ED9019C57245C580D3B5E /* DateHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4DB44E4AC9272DBF91AB0190 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA41EA0E2599C6CF96552784 /* Rday.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AC65885DC401090C75682E3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3513E26EA6669C9D44DDE5C7 /* PreviewData.swift */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9666A624132B1764F839CF4B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				664E9095DA9CC66579C5020C /* AppStateManager.swift */,
+				DAAB8FACBF089AA1DCD3E57A /* EmailService.swift */,
+				C8681BF9BFD9DBED1568946D /* NotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9A5107557FCC7B99D1366C82 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4850E9D26D2564847D6191FB /* Color+Hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A3996849185C4C7A73DCDBCF /* Countdown */ = {
+			isa = PBXGroup;
+			children = (
+				DDA33FCA1DF45425B7D9ACDF /* CategoryChipView.swift */,
+				AEBBA4D119718C519314C869 /* CategoryPickerView.swift */,
+				3F6712147D5CE08E4B17F839 /* ColorPresetPickerView.swift */,
+				81A3910A7616E4AE61CE0752 /* CountdownDetailView.swift */,
+				E967C38CA04FA5D3492C734D /* CountdownFormView.swift */,
+				457AA9038CFEDF466A7B073E /* CountdownListView.swift */,
+				6DE4196666B8D12104FF02D3 /* DateCalculatorView.swift */,
+				1A6458FF93B47B521112086D /* EventCardView.swift */,
+				3D4A92354A340961B6376B48 /* ShareCardView.swift */,
+			);
+			path = Countdown;
+			sourceTree = "<group>";
+		};
+		C68145B09AF7BD9FD7D8C927 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				33FF8E46AEA4E12D15AB48BE /* CountdownEvent.swift */,
+				B58770D557DC1A408BF1E240 /* EventCategory.swift */,
+				86E92D7FEC6C2BCDF7228D56 /* TodoItem.swift */,
+				0024DF00C2F1516FF2A0A11D /* TodoReminder.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C8F2065825E50FAD5B28D9B7 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				FEDBFBF71E2CC3C82E674BA1 /* TodoDetailView.swift */,
+				6A33A0AE8AB3F6ADF27F44D2 /* TodoFormView.swift */,
+				1434877EFB0D51FCCE06053E /* TodoListView.swift */,
+				CC68862BAD409544D1C0E158 /* TodoRowView.swift */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
+		CE1A60D9B56BCF65B496C19A /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				2664D9B3A2BD1B36FA850154 /* DesignSystem.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		F0CE15721028E9F4D3D8B7B3 /* Rday */ = {
+			isa = PBXGroup;
+			children = (
+				F36C0C8480D40022AFD9A241 /* Assets.xcassets */,
+				761E9EFBB8408A134C855DAF /* ContentView.swift */,
+				CB113782927A3D8E69EE7105 /* Info.plist */,
+				0340EE9D8E1F15F658BAF7E8 /* RdayApp.swift */,
+				CE1A60D9B56BCF65B496C19A /* Design */,
+				9A5107557FCC7B99D1366C82 /* Extensions */,
+				C68145B09AF7BD9FD7D8C927 /* Models */,
+				8AC65885DC401090C75682E3 /* Preview Content */,
+				9666A624132B1764F839CF4B /* Services */,
+				46A30E8E50CA293A1D34960A /* Utilities */,
+				3BC0A91E5EC6BF96E93A3CD0 /* ViewModels */,
+				033BBB1C8BCDCD8F8DFA4894 /* Views */,
+			);
+			path = Rday;
+			sourceTree = "<group>";
+		};
+		F4C2FBA4A5A8F3ECE10ED232 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				531DBFB17254864769F3ACF3 /* EmptyStateView.swift */,
+				9EA8D88422C5D51EDAEF9488 /* PriorityBadgeView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5627D10918CCF2BB718BA8E5 /* Rday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAC3D98EA6826FF519921ECF /* Build configuration list for PBXNativeTarget "Rday" */;
+			buildPhases = (
+				5033BD18CAD5B82AFD20BA17 /* SwiftLint */,
+				C47B6409B29FA20F13C57345 /* Sources */,
+				EE1843C7E00089AD9A3E771C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rday;
+			packageProductDependencies = (
+			);
+			productName = Rday;
+			productReference = DA41EA0E2599C6CF96552784 /* Rday.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		951B1324981940280DE405F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					5627D10918CCF2BB718BA8E5 = {
+						DevelopmentTeam = 23Y8ZYJ776;
+					};
+				};
+			};
+			buildConfigurationList = EBAD7C18AC7DDFC8DB39F6A2 /* Build configuration list for PBXProject "Rday" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 01E5C7E2554CD19E07FCBBCE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4DB44E4AC9272DBF91AB0190 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5627D10918CCF2BB718BA8E5 /* Rday */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE1843C7E00089AD9A3E771C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F11B3F0198782477515F377 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5033BD18CAD5B82AFD20BA17 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C47B6409B29FA20F13C57345 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA31B24E4092C88DC40F0DA5 /* AppStateManager.swift in Sources */,
+				931C3CEB5EF519BAE220ACB4 /* CategoryChipView.swift in Sources */,
+				09BE7B1E82EB0A6195CA36F4 /* CategoryPickerView.swift in Sources */,
+				0B24E90CC109BF4ABE05D013 /* Color+Hex.swift in Sources */,
+				DD6651E6D7CFEDAF4B00F5C4 /* ColorPresetPickerView.swift in Sources */,
+				3D3D1688CE387E285FAA4BC1 /* Constants.swift in Sources */,
+				507FCF24A38279752378ED83 /* ContentView.swift in Sources */,
+				099B33CBEBDBCF652FA8125F /* CountdownDetailView.swift in Sources */,
+				168811282789F455AE20A68C /* CountdownEvent.swift in Sources */,
+				32A2CA0BEF149893EE7D91E7 /* CountdownFormView.swift in Sources */,
+				2972079ADC55E562F8974BBC /* CountdownFormViewModel.swift in Sources */,
+				CC76CFFD94C32669DFFBD3C9 /* CountdownListView.swift in Sources */,
+				71A9E0A1E91BE78F898F473C /* CountdownListViewModel.swift in Sources */,
+				97A1446C368BA6D25221AC5D /* DateCalculatorView.swift in Sources */,
+				114A8BDCB9F7AE5FFC6D9660 /* DateHelper.swift in Sources */,
+				949D0E6470471DB7984D691A /* DesignSystem.swift in Sources */,
+				F2E97D8089253206A9B03F0E /* EmailService.swift in Sources */,
+				F8BC81BAD26F2E31FEFA1118 /* EmptyStateView.swift in Sources */,
+				445CB1E0D37F8F8E18869BA3 /* EventCardView.swift in Sources */,
+				6676F581A971DE3F71BC9D04 /* EventCategory.swift in Sources */,
+				E14FD2CFFA7324FB36723A1A /* NotificationService.swift in Sources */,
+				E58DF8654B20C0E2D02F36F9 /* PreviewData.swift in Sources */,
+				DBBDFD883237D345255D30CD /* PriorityBadgeView.swift in Sources */,
+				FCE6221FB91E3205535A1296 /* RdayApp.swift in Sources */,
+				9BE9CAB307C44440E683ED6C /* ShareCardView.swift in Sources */,
+				0C44FEBE403D6B33DD441504 /* TodoDetailView.swift in Sources */,
+				0A179A9E3CAB108EB85B3F06 /* TodoFormView.swift in Sources */,
+				6B8511BAA8FA4A0146DD418F /* TodoFormViewModel.swift in Sources */,
+				7C49FCA68969828C61000093 /* TodoItem.swift in Sources */,
+				30EE6E8729C0E03D51283D85 /* TodoListView.swift in Sources */,
+				2DE1BE1ACF1C51A88C412C25 /* TodoListViewModel.swift in Sources */,
+				830A41634418A3E25DABD1BB /* TodoReminder.swift in Sources */,
+				A079A508B9ED826225CAEFFD /* TodoRowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1E1908CAC3348837B7A6CC27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 23Y8ZYJ776;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Rday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.renshuaiwei.dailytodo;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		52BB6553CA3F00D17149C51C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Rday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		5339A2737562D7F35582CF9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Rday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		EAC143A87A0FC7A36EDDB9BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 23Y8ZYJ776;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Rday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.renshuaiwei.dailytodo;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAC3D98EA6826FF519921ECF /* Build configuration list for PBXNativeTarget "Rday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC143A87A0FC7A36EDDB9BB /* Debug */,
+				1E1908CAC3348837B7A6CC27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EBAD7C18AC7DDFC8DB39F6A2 /* Build configuration list for PBXProject "Rday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52BB6553CA3F00D17149C51C /* Debug */,
+				5339A2737562D7F35582CF9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 951B1324981940280DE405F8 /* Project object */;
+}
