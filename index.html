@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rday - 记录每一天</title>
+    <meta name="description" content="Rday 是一款 iOS 生活工具应用，集倒计时、待办清单与跑马灯于一体，帮你记录重要日子、管理日常任务。">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg: #fafafa;
+            --surface: #ffffff;
+            --text: #1a1a2e;
+            --text-secondary: #6b7280;
+            --accent: #007aff;
+            --accent-glow: rgba(0, 122, 255, 0.15);
+            --border: #e5e7eb;
+            --radius: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC', 'Helvetica Neue', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 24px 80px;
+            background: linear-gradient(180deg, #f0f7ff 0%, #fafafa 100%);
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            margin-bottom: 28px;
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 52px;
+            color: #fff;
+            user-select: none;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+        }
+
+        .hero .tagline {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .badge-row {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .badge svg { width: 16px; height: 16px; }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section { padding: 64px 0; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .section-header p { color: var(--text-secondary); font-size: 17px; }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 720px) {
+            .features { grid-template-columns: 1fr; }
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+        .feature-card p { color: var(--text-secondary); font-size: 15px; }
+
+        .icon-clock { background: #fff3e0; color: #f59e0b; }
+        .icon-check { background: #e8f5e9; color: #34c759; }
+        .icon-marquee { background: #ede7f6; color: #7c4dff; }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 720px) {
+            .screenshots { grid-template-columns: 1fr; }
+        }
+
+        .screenshot-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .screenshot-placeholder {
+            width: 100%;
+            aspect-ratio: 9/16;
+            max-width: 220px;
+            margin: 0 auto 16px;
+            border-radius: 20px;
+            background: linear-gradient(180deg, #f9fafb 0%, #e5e7eb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-size: 14px;
+            border: 2px dashed #d1d5db;
+        }
+
+        .screenshot-card h4 { font-weight: 600; margin-bottom: 4px; }
+        .screenshot-card p { color: var(--text-secondary); font-size: 14px; }
+
+        .tech-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .tech-tag {
+            padding: 6px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 80px 24px;
+            background: linear-gradient(180deg, #fafafa 0%, #f0f7ff 100%);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 100px;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .btn:active { transform: scale(0.97); }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 4px 16px var(--accent-glow);
+        }
+
+        .btn-primary:hover { box-shadow: 0 6px 24px rgba(0, 122, 255, 0.3); }
+
+        .btn-outline {
+            background: var(--surface);
+            color: var(--text);
+            border: 1.5px solid var(--border);
+        }
+
+        .btn-outline:hover { border-color: #9ca3af; }
+
+        .btn-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            color: #9ca3af;
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <div class="app-icon">📅</div>
+    <h1>Rday</h1>
+    <p class="tagline">倒计时 · 待办清单 · 跑马灯 — 记录你的每一天</p>
+    <div class="badge-row">
+        <span class="badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            iOS 17+
+        </span>
+        <span class="badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            简体中文
+        </span>
+        <span class="badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            SwiftUI
+        </span>
+    </div>
+</header>
+
+<section class="container">
+    <div class="section-header">
+        <h2>三大核心功能</h2>
+        <p>一个 App，满足日常记录的全部需求</p>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">
+            <div class="feature-icon icon-clock">⏳</div>
+            <h3>倒计时</h3>
+            <p>为重要日子创建精美倒计时卡。支持多种分类标签、自定义颜色主题，一键生成分享卡片，把你的期待传递给朋友。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon icon-check">✅</div>
+            <h3>待办清单</h3>
+            <p>轻量高效的任务管理。支持优先级标记、截止日期提醒、一键邮件发送。专注核心体验，不臃肿、不复杂。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon icon-marquee">💡</div>
+            <h3>跑马灯</h3>
+            <p>全屏 LED 滚动字幕。生日祝福、演唱会应援、活动标语——自由调整字体大小、颜色、速度与滚动方向，点亮全场。</p>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="section-header">
+        <h2>预览</h2>
+        <p>简洁优雅的 iOS 原生设计</p>
+    </div>
+
+    <div class="screenshots">
+        <div class="screenshot-card">
+            <div class="screenshot-placeholder">
+                📸<br>倒计时
+            </div>
+            <h4>倒计时列表</h4>
+            <p>卡片式布局，分类筛选</p>
+        </div>
+        <div class="screenshot-card">
+            <div class="screenshot-placeholder">
+                📸<br>待办
+            </div>
+            <h4>待办清单</h4>
+            <p>优先级标记，滑动操作</p>
+        </div>
+        <div class="screenshot-card">
+            <div class="screenshot-placeholder">
+                📸<br>跑马灯
+            </div>
+            <h4>跑马灯播放</h4>
+            <p>全屏横竖屏滚动展示</p>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="tech-section">
+        <h2 style="font-size:24px;font-weight:700;margin-bottom:8px;">技术栈</h2>
+        <p style="color:var(--text-secondary);">使用 Apple 最新框架构建</p>
+        <div class="tech-stack">
+            <span class="tech-tag">SwiftUI</span>
+            <span class="tech-tag">SwiftData</span>
+            <span class="tech-tag">Swift 6.0</span>
+            <span class="tech-tag">iOS 17+</span>
+            <span class="tech-tag">Xcode 16</span>
+            <span class="tech-tag">Combine</span>
+            <span class="tech-tag">UserNotifications</span>
+            <span class="tech-tag">MessageUI</span>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2 style="font-size:32px;font-weight:700;margin-bottom:12px;">获取 Rday</h2>
+    <p style="color:var(--text-secondary);font-size:17px;margin-bottom:8px;">开源、简洁、无广告。从今天开始，认真记录每一天。</p>
+    <div class="btn-row">
+        <a href="https://github.com/SSDWGG/rday" class="btn btn-primary" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+        </a>
+        <a href="https://apps.apple.com" class="btn btn-outline" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            App Store
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>Made with ❤️ · <a href="https://github.com/SSDWGG/rday">Rday</a> · &copy; 2025</p>
+</footer>
+
+</body>
+</html>
