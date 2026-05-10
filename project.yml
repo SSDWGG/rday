@@ -1,0 +1,33 @@
+name: Rday
+options:
+  bundleIdPrefix: com.renshuaiwei
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+
+settings:
+  base:
+    INFOPLIST_FILE: Rday/Info.plist
+    SWIFT_VERSION: "6.0"
+
+targets:
+  Rday:
+    type: application
+    platform: iOS
+    sources:
+      - path: Rday
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.renshuaiwei.dailytodo
+        INFOPLIST_FILE: Rday/Info.plist
+        DEVELOPMENT_TEAM: "23Y8ZYJ776"
+        GENERATE_INFOPLIST_FILE: false
+    preBuildScripts:
+      - name: "SwiftLint"
+        script: |
+          if which swiftlint > /dev/null; then
+            swiftlint
+          fi
+        basedOnDependencyAnalysis: false
+        inputFiles: []
+        outputFiles: []
