@@ -20,6 +20,7 @@ jobs:
             --exclude='.git' \
             --exclude='.github' \
             --exclude='.gitignore' \
+            --exclude='.claude' \
             --exclude='Rday.xcodeproj' \
             --exclude='Rday' \
             --exclude='project.yml' \
